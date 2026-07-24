@@ -5,88 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>درباره استخر دانش کرج</title>
     <meta name="description" content="معرفی استخر دانش کرج، تاریخچه، تیم و مأموریت.">
-    <link rel="stylesheet" href="/assets/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-    <script src="/assets/main.js" defer></script>
-    <script src="/assets/interactions.js" defer></script>
-    <script src="/assets/animations.js" defer></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; direction: rtl; }
+        body { font-family: 'Tahoma', Arial, sans-serif; background: #f4fbfd; color: #38566a; line-height: 1.6; }
+        .container { width: min(calc(100% - 48px), 1240px); margin: 0 auto; }
+        header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .site-header__inner { display: flex; align-items: center; gap: 20px; justify-content: space-between; }
+        .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #092f46; font-weight: bold; }
+        .site-logo__mark { width: 40px; height: 40px; background: linear-gradient(145deg, #087ea4, #045d7b); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+        nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+        nav a { color: #092f46; text-decoration: none; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; font-size: 14px; font-weight: bold; }
+        nav a:hover { background: #dff7fa; color: #087ea4; }
+        main { padding: 100px 0; }
+        section { padding: 50px 0; }
+        h1 { color: #092f46; font-size: 42px; margin-bottom: 20px; }
+        p { color: #38566a; margin-bottom: 15px; }
+        .button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 24px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: all 0.3s; }
+        .button--primary { background: #087ea4; color: white; }
+        .button--primary:hover { background: #045d7b; transform: translateY(-2px); }
+        .button--secondary { background: white; color: #087ea4; border: 2px solid #087ea4; }
+        .button--secondary:hover { background: #dff7fa; }
+        nav > * { margin-top: 0; }
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
+    <a class="skip-link" href="#main-content" style="position: fixed; top: 10px; right: 10px; background: #092f46; color: white; padding: 10px; text-decoration: none; border-radius: 4px; z-index: 9999;">
+        رفتن به محتوای اصلی
+    </a>
     <header class="site-header" id="site-header">
-        <div class="site-topbar">
-            <div class="container site-topbar__inner">
-                <div class="site-topbar__welcome">
-                    <span aria-hidden="true">✦</span>
-                    <span>استخر دانش کرج؛ همراه شما برای شنا و آموزش</span>
-                </div>
-                <div class="site-topbar__links">
-                    <a href="/contact/">اطلاعات تماس</a>
-                    <span aria-hidden="true">|</span>
-                    <a href="/faq/">سوالات متداول</a>
-                </div>
-            </div>
-        </div>
         <div class="container site-header__inner">
-            <a class="site-logo" href="/" aria-label="صفحه اصلی">
+            <a class="site-logo" href="./" aria-label="صفحه اصلی">
                 <span class="site-logo__mark" aria-hidden="true">د</span>
-                <span class="site-logo__text">
-                    <strong>استخر دانش</strong>
-                    <small>کرج</small>
-                </span>
+                <span><strong>استخر دانش</strong></span>
             </a>
-            <button class="menu-toggle" type="button" aria-label="باز کردن منوی سایت" aria-expanded="false" aria-controls="main-navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="navigation-overlay" data-menu-close></div>
-            <nav class="main-navigation" id="main-navigation" aria-label="منوی اصلی">
-                <div class="main-navigation__header">
-                    <div class="main-navigation__mobile-brand">
-                        <span class="site-logo__mark" aria-hidden="true">د</span>
-                        <span>منوی سایت</span>
-                    </div>
-                    <button class="menu-close" type="button" aria-label="بستن منوی سایت" data-menu-close>
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <ul class="main-navigation__list">
-                    <li><a href="/">خانه</a></li>
-                    <li><a href="/about/">درباره ما</a></li>
-                    <li><a href="/facilities/">امکانات</a></li>
-                    <li><a href="/classes/">آموزش شنا</a></li>
-                    <li><a href="/coaches/">مربیان</a></li>
-                    <li><a href="/schedule/">سانس‌ها</a></li>
-                    <li><a href="/pricing/">تعرفه‌ها</a></li>
-                    <li><a href="/gallery/">گالری</a></li>
-                    <li><a href="/blog/">وبلاگ</a></li>
-                    <li><a href="/contact/">تماس با ما</a></li>
-                </ul>
-                <div class="main-navigation__mobile-cta">
-                    <a class="button button--primary" href="/reservation/">رزرو آنلاین<span aria-hidden="true">←</span></a>
-                    <a class="main-navigation__mobile-contact" href="/contact/">تماس با مجموعه</a>
-                </div>
+            <nav>
+                <a href="./">خانه</a>
+                <a href="./about/">درباره ما</a>
+                <a href="./facilities/">امکانات</a>
+                <a href="./classes/">آموزش شنا</a>
+                <a href="./coaches/">مربیان</a>
+                <a href="./schedule/">سانس‌ها</a>
+                <a href="./pricing/">تعرفه‌ها</a>
+                <a href="./gallery/">گالری</a>
+                <a href="./blog/">وبلاگ</a>
+                <a href="./contact/">تماس</a>
             </nav>
-            <div class="site-header__actions">
-                <a class="site-header__contact" href="/contact/" aria-label="تماس با استخر">
-                    <span class="site-header__contact-icon" aria-hidden="true">☎</span>
-                    <span><small>ارتباط با ما</small><strong>تماس با مجموعه</strong></span>
-                </a>
-                <a class="button button--primary header-booking" href="/reservation/"><span>رزرو آنلاین</span><span aria-hidden="true">←</span></a>
-            </div>
         </div>
     </header>
     <main id="main-content">
-        <section class="section" style="padding-top: 150px;">
+        <section>
             <div class="container">
                 <h1>درباره استخر دانش کرج</h1>
-                <p>صفحه درباره ما در حال توسعه است. لطفاً بعداً مراجعه کنید.</p>
-                <nav style="margin-top: 2rem;">
-                    <a href="/" style="margin-right: 1rem;" class="button button--primary">صفحه اصلی</a>
-                    <a href="/schedule/" class="button button--secondary">سانس‌ها</a>
-                </nav>
+                <p>استخر دانش کرج یک مرکز ورزشی مدرن است که خدمات شنا و آموزش شنا را برای تمام سنین فراهم می‌کند.</p>
+                <p style="margin-top: 20px;">
+                    <a href="./" class="button button--primary">صفحه اصلی</a>
+                    <a href="./schedule/" class="button button--secondary" style="margin-right: 10px;">سانس‌ها</a>
+                </p>
             </div>
         </section>
     </main>
