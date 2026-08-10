@@ -1,0 +1,39 @@
+{
+  "site": {
+    "name": "استخر صدف کرج",
+    "name_short": "استخر صدف",
+    "domain": "https://wikifront.github.io/sadafpool",
+    "base_href": "/sadafpool/",
+    "tagline": "مجموعه ورزش‌های آبی صدف کرج",
+    "description": "استخر صدف کرج؛ مجموعه ورزش‌های آبی با استخر آموزش شنا، سونا، جکوزی و باشگاه. کلاس‌های آموزش شنا کودکان و بزرگسالان، سانس‌های بانوان و آقایان.",
+    "keywords": "استخر کرج, استخر صدف کرج, آموزش شنا کرج, کلاس شنا کرج, استخر بانوان کرج, سانس استخر کرج, سونا کرج, جکوزی کرج, باشگاه کرج",
+    "address": {
+      "street": "کرج، بلوار طالقانی، جنب پارک دانش، مجموعه ورزشی صدف",
+      "locality": "کرج",
+      "region": "البرز",
+      "postal_code": "۳۱۴۶۸"
+    },
+    "geo": { "lat": "35.8367", "lng": "50.9392" },
+    "phone": "۰۲۶-۳۲۲۵۴۰۰۰",
+    "phone_tel": "+982632254000",
+    "mobile": "۰۹۱۲۳۶۶۵۴۰۰",
+    "mobile_tel": "+989123665400",
+    "email": "info@sadafpool.ir",
+    "hours": {
+      "weekday": "۰۷:۰۰ تا ۲۲:۰۰",
+      "friday": "۰۹:۰۰ تا ۲۰:۰۰",
+      "women": "سانس‌های اختصاصی بانوان: ۸:۰۰ تا ۱۳:۰۰ و ۱۷:۰۰ تا ۲۰:۰۰"
+    },
+    "social": {
+      "instagram": "https://instagram.com/sadafpool",
+      "telegram": "https://t.me/sadafpool",
+      "whatsapp": "https://wa.me/989123665400"
+    },
+    "stats": {
+      "years": "۱۵+",
+      "students": "۵٬۰۰۰+",
+      "coaches": "۱۲",
+      "satisfaction": "۹۸٪"
+    }
+  }
+}

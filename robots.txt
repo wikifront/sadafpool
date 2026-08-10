@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wikifront.github.io/sadafpool/sitemap.xml
