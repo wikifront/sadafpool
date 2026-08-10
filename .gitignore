@@ -1,0 +1,9 @@
+# Templates (build-time only)
+_head_template.html
+_header_template.html
+_footer_template.html
+
+# Local server logs / temp
+_chrome_profile*/
+_shot_*.png
+_dom_*.html

@@ -1,68 +1,1003 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <base href="/sadafpool/">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سوالات متداول - استخر دانش کرج</title>
-    <meta name="description" content="پاسخ به سوالات متداول درباره خدمات استخر دانش کرج.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; direction: rtl; }
-        body { font-family: 'Tahoma', Arial, sans-serif; background: #f4fbfd; color: #38566a; line-height: 1.6; }
-        .container { width: min(calc(100% - 48px), 1240px); margin: 0 auto; }
-        header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .site-header__inner { display: flex; align-items: center; gap: 20px; justify-content: space-between; }
-        .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #092f46; font-weight: bold; }
-        .site-logo__mark { width: 40px; height: 40px; background: linear-gradient(145deg, #087ea4, #045d7b); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
-        nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-        nav a { color: #092f46; text-decoration: none; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; font-size: 14px; font-weight: bold; }
-        nav a:hover { background: #dff7fa; color: #087ea4; }
-        main { padding: 100px 0; }
-        section { padding: 50px 0; }
-        h1 { color: #092f46; font-size: 42px; margin-bottom: 20px; }
-        p { color: #38566a; margin-bottom: 15px; }
-        .button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 24px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: all 0.3s; }
-        .button--primary { background: #087ea4; color: white; }
-        .button--primary:hover { background: #045d7b; transform: translateY(-2px); }
-        .button--secondary { background: white; color: #087ea4; border: 2px solid #087ea4; }
-        .button--secondary:hover { background: #dff7fa; }
-    </style>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="language"
+        content="fa"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="author"
+        content="استخر دانش کرج"
+    >
+
+    <meta
+        name="theme-color"
+        content="#087ea4"
+    >
+
+    <meta
+        name="format-detection"
+        content="telephone=yes"
+    >
+
+    <!-- عنوان صفحه -->
+    <title>سوالات متداول | استخر دانش کرج</title>
+
+    <!-- توضیحات متا -->
+    <meta
+        name="description"
+        content="پاسخ سوالات پرتکرار درباره سانس‌ها، تعرفه‌ها، کلاس‌های آموزش شنا و امکانات مجموعه استخر دانش کرج."
+    >
+
+    <!-- Canonical -->
+    <link
+        rel="canonical"
+        href="https://wikifront.github.io/sadafpool/faq/"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="assets/images/apple-touch-icon.png"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:locale"
+        content="fa_IR"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="استخر دانش کرج"
+    >
+
+    <meta
+        property="og:title"
+        content="سوالات متداول استخر دانش"
+    >
+
+    <meta
+        property="og:description"
+        content="پاسخ پرتکرارترین سوالات درباره سانس‌ها، تعرفه‌ها و کلاس‌های استخر دانش کرج."
+    >
+
+    <meta
+        property="og:url"
+        content="https://wikifront.github.io/sadafpool/faq/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://wikifront.github.io/sadafpool/assets/images/og-faq.webp"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="سوالات متداول استخر دانش"
+    >
+
+    <meta
+        property="og:image:type"
+        content="image/webp"
+    >
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    >
+
+    <meta
+        property="og:image:height"
+        content="630"
+    >
+
+    <!-- Twitter Card -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="سوالات متداول استخر دانش"
+    >
+
+    <meta
+        name="twitter:description"
+        content="پاسخ پرتکرارترین سوالات درباره سانس‌ها، تعرفه‌ها و کلاس‌های استخر دانش کرج."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://wikifront.github.io/sadafpool/assets/images/og-faq.webp"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="کلاس‌های آموزش شنا در استخر دانش کرج"
+    >
+
+    <!-- اتصال سریع به منابع خارجی GSAP -->
+    <link
+        rel="preconnect"
+        href="https://cdn.jsdelivr.net"
+    >
+
+    <!-- فونت فارسی موقت -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+  <!-- CSS اصلی -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- کتابخانه‌های خارجی -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+    <!-- اسکریپت‌های اختصاصی -->
+    <script src="assets/main.js" defer></script>
+    <script src="assets/interactions.js" defer></script>
+    <script src="assets/animations.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://wikifront.github.io/sadafpool/faq/#webpage",
+                "url": "https://wikifront.github.io/sadafpool/faq/",
+                "name": "سوالات متداول استخر دانش",
+                "description": "پاسخ سوالات پرتکرار درباره سانس‌ها، تعرفه‌ها، کلاس‌های آموزش شنا و امکانات مجموعه استخر دانش کرج.",
+                "inLanguage": "fa-IR",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://wikifront.github.io/sadafpool/#website",
+                    "url": "https://wikifront.github.io/sadafpool/",
+                    "name": "استخر دانش کرج",
+                    "inLanguage": "fa-IR"
+                },
+                "about": {
+                    "@type": "SportsActivityLocation",
+                    "name": "استخر دانش کرج",
+                    "url": "https://wikifront.github.io/sadafpool/"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://wikifront.github.io/sadafpool/faq/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "خانه",
+                        "item": "https://wikifront.github.io/sadafpool/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "آموزش شنا",
+                        "item": "https://wikifront.github.io/sadafpool/faq/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
 </head>
 <body>
-    <a class="skip-link" href="#main-content" style="position: fixed; top: 10px; right: 10px; background: #092f46; color: white; padding: 10px; text-decoration: none; border-radius: 4px; z-index: 9999;">
+<a class="skip-link" href="#main-content">
         رفتن به محتوای اصلی
     </a>
-    <header class="site-header" id="site-header">
-        <div class="container site-header__inner">
-            <a class="site-logo" href="../" aria-label="صفحه اصلی">
-                <span class="site-logo__mark" aria-hidden="true">د</span>
-                <span><strong>استخر دانش</strong></span>
-            </a>
-            <nav>
-                <a href="../">خانه</a>
-                <a href="../about/">درباره ما</a>
-                <a href="../facilities/">امکانات</a>
-                <a href="../classes/">آموزش شنا</a>
-                <a href="../coaches/">مربیان</a>
-                <a href="../schedule/">سانس‌ها</a>
-                <a href="../pricing/">تعرفه‌ها</a>
-                <a href="../gallery/">گالری</a>
-                <a href="../blog/">وبلاگ</a>
-                <a href="../contact/">تماس</a>
-            </nav>
-        </div>
-    </header>
-    <main id="main-content">
-        <section>
-            <div class="container">
-                <h1>سوالات متداول</h1>
-                <p>بخش سوالات متداول در حال توسعه است.</p>
-                <p style="margin-top: 20px;">
-                    <a href="../" class="button button--primary">صفحه اصلی</a>
-                    <a href="../contact/" class="button button--secondary" style="margin-right: 10px;">تماس با ما</a>
-                </p>
+<header
+    class="site-header"
+    id="site-header"
+>
+
+    <!-- نوار بالایی -->
+    <div class="site-topbar">
+
+        <div class="container site-topbar__inner">
+
+            <div class="site-topbar__welcome">
+                <span aria-hidden="true">✦</span>
+                <span>
+                    استخر دانش کرج؛ همراه شما برای شنا و آموزش
+                </span>
             </div>
+
+            <div class="site-topbar__links">
+
+                <a href="contact/">
+                    اطلاعات تماس
+                </a>
+
+                <span aria-hidden="true">|</span>
+
+                <a href="faq/">
+                    سوالات متداول
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- هدر اصلی -->
+    <div class="container site-header__inner">
+
+        <!-- Logo -->
+        <a
+            class="site-logo"
+            href="./"
+            aria-label="صفحه اصلی استخر دانش کرج"
+        >
+            <span
+                class="site-logo__mark"
+                aria-hidden="true"
+            >
+                د
+            </span>
+
+            <span class="site-logo__text">
+                <strong>استخر دانش</strong>
+                <small>کرج</small>
+            </span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="باز کردن منوی سایت"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Overlay -->
+        <div
+            class="navigation-overlay"
+            data-menu-close
+        ></div>
+
+        <!-- Navigation -->
+        <nav
+            class="main-navigation"
+            id="main-navigation"
+            aria-label="منوی اصلی"
+        >
+
+            <div class="main-navigation__header">
+
+                <div class="main-navigation__mobile-brand">
+
+                    <span
+                        class="site-logo__mark"
+                        aria-hidden="true"
+                    >
+                        د
+                    </span>
+
+                    <span>
+                        منوی سایت
+                    </span>
+
+                </div>
+
+                <button
+                    class="menu-close"
+                    type="button"
+                    aria-label="بستن منوی سایت"
+                    data-menu-close
+                >
+                    <span aria-hidden="true">×</span>
+                </button>
+
+            </div>
+
+            <ul class="main-navigation__list">
+
+                <li>
+                    <a href="./">
+                        خانه
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about/">
+                        درباره ما
+                    </a>
+                </li>
+
+                <li>
+                    <a href="facilities/">
+                        امکانات
+                    </a>
+                </li>
+
+                <li>
+                    <a href="classes/">
+                        آموزش شنا
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coaches/">
+                        مربیان
+                    </a>
+                </li>
+
+                <li>
+                    <a href="schedule/">
+                        سانس‌ها
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pricing/">
+                        تعرفه‌ها
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery/">
+                        گالری
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog/">
+                        وبلاگ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact/">
+                        تماس با ما
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="main-navigation__mobile-cta">
+
+                <a
+                    class="button button--primary"
+                    href="reservation/"
+                >
+                    رزرو آنلاین
+                    <span aria-hidden="true">←</span>
+                </a>
+
+                <a
+                    class="main-navigation__mobile-contact"
+                    href="contact/"
+                >
+                    تماس با مجموعه
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="site-header__actions">
+
+            <a
+                class="site-header__contact"
+                href="contact/"
+                aria-label="تماس با استخر دانش کرج"
+            >
+                <span
+                    class="site-header__contact-icon"
+                    aria-hidden="true"
+                >
+                    ☎
+                </span>
+
+                <span>
+                    <small>ارتباط با ما</small>
+                    <strong>تماس با مجموعه</strong>
+                </span>
+            </a>
+
+            <a
+                class="button button--primary header-booking"
+                href="reservation/"
+            >
+                <span>رزرو آنلاین</span>
+                <span aria-hidden="true">←</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <main id="main-content">
+
+        <!-- =========================
+             FAQ Hero
+        ========================== -->
+        <section class="faq-page__hero" aria-labelledby="faq-page-title">
+
+            <div class="container">
+
+                <nav class="faq-page__breadcrumbs" aria-label="موقعیت فعلی">
+                    <a href="./">خانه</a>
+                    <span aria-hidden="true">←</span>
+                    <span>سوالات متداول</span>
+                </nav>
+
+                <div class="faq-page__hero-content">
+
+                    <span class="faq-page__eyebrow">
+                        راهنمای سریع
+                    </span>
+
+                    <h1 id="faq-page-title" class="faq-page__heading">
+                        سوالات متداول
+                    </h1>
+
+                    <p>
+                        پاسخ پرتکرارترین سوال‌ها درباره سانس‌ها، تعرفه‌ها، کلاس‌های
+                        آموزش شنا و امکانات مجموعه را اینجا ببینید.
+                    </p>
+
+                    <div class="faq-page__hero-actions">
+                        <a class="faq-page__hero-link" href="contact/">
+                            سوال دیگری دارید؟ تماس بگیرید
+                            <span aria-hidden="true">←</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- =========================
+             FAQ Content
+        ========================== -->
+        <section class="faq-page__content-section" aria-labelledby="faq-content-title">
+
+            <div class="container">
+
+                <h2 id="faq-content-title" class="visually-hidden">
+                    پاسخ سوالات متداول
+                </h2>
+
+                <div class="faq-page__layout">
+
+                    <aside class="faq-page__sidebar">
+
+                        <div class="faq-page__sidebar-card">
+
+                            <h3 class="faq-page__heading">
+                                دسترسی سریع
+                            </h3>
+
+                            <nav class="faq-page__quick-links" aria-label="لینک‌های سریع سوالات متداول">
+                                <a href="schedule/">برنامه سانس‌ها</a>
+                                <a href="pricing/">تعرفه‌ها</a>
+                                <a href="classes/">کلاس‌های آموزش</a>
+                                <a href="reservation/">رزرو سانس</a>
+                                <a href="facilities/">امکانات</a>
+                                <a href="contact/">تماس با ما</a>
+                            </nav>
+
+                        </div>
+
+                    </aside>
+
+                    <div class="faq-page__main">
+
+                        <div class="faq-page__accordion">
+
+                            
+                        <div class="faq-page__item faq-page__item--open">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="true"
+                                >
+                                    سانس‌های استخر چه ساعاتی هستند؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" >
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        سانس‌های استخر دانش کرج شامل صبح، ظهر و عصر برای بانوان، آقایان و کودکان است. برای مشاهده دقیق برنامه سانس‌ها به صفحه
+                                        <a href="schedule/">برنامه سانس‌ها</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    آیا آموزش شنا برای کودکان دارید؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        بله! ما کلاس‌های آموزش شنا برای کودکان از سن ۴ سال به بالا داریم که توسط مربیان متخصص کودک برگزار می‌شود. کلاس‌ها در فضایی شاد، امن و با رعایت کامل نکات ایمنی برگزار می‌شوند.
+                                        <a href="classes/">کلاس‌های کودکان</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    برای رزرو سانس چطور اقدام کنم؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        برای رزرو سانس می‌توانید از طریق صفحه رزرو آنلاین یا تماس با مجموعه اقدام کنید. رزرو آنلاین در هر ساعت از شبانه‌روز در دسترس است.
+                                        <a href="reservation/">روش‌های رزرو</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    آیا سونا و جکوزی هم دارید؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        بله، مجموعه استخر دانش دارای سونا خشک، سونا بخار و جکوزی برای استفاده اعضا است. استفاده از این امکانات در تعرفه‌های خاص گنجانده شده است.
+                                        <a href="facilities/">امکانات مجموعه</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    تعرفه‌ها چگونه است؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        تعرفه‌ها بسته به نوع سانس، روز هفته و نوع بلیت (تک‌بار مصرف یا اشتراک) متفاوت است. برای مشاهده تعرفه‌های کامل به صفحه تعرفه‌ها مراجعه کنید.
+                                        <a href="pricing/">تعرفه‌ها</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    آیا مربی خصوصی می‌توانم رزرو کنم؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        بله، امکان رزرو کلاس خصوصی با مربیان مجرب مجموعه وجود دارد. برای هماهنگی، کافی است با واحد آموزش مجموعه تماس بگیرید.
+                                        <a href="coaches/">معرفی مربیان</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    شرایط استفاده از استخر برای بانوان چیست؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        استخر دانش در سانس‌های مشخصی به بانوان اختصاص دارد. در این سانس‌ها تمام شرایط رعایت حریم خصوصی و آرامش بانوان فراهم است.
+                                        <a href="schedule/">سانس بانوان</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="faq-page__item">
+
+                            <h3 class="faq-page__question">
+                                <button
+                                    class="faq-page__toggle"
+                                    type="button"
+                                    aria-expanded="false"
+                                >
+                                    آیا امکان بازدید از مجموعه قبل از ثبت‌نام وجود دارد؟
+                                    <span class="faq-page__toggle-icon" aria-hidden="true">+</span>
+                                </button>
+                            </h3>
+
+                            <div class="faq-page__answer" hidden>
+                                <div class="faq-page__answer-inner">
+                                    <p>
+                                        قطعاً! خوشحال می‌شویم قبل از ثبت‌نام از مجموعه بازدید کنید. کافی است با واحد پذیرش هماهنگ کنید تا در ساعات مشخصی میزبان شما باشیم.
+                                        <a href="contact/">تماس با پذیرش</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+             FAQ CTA
+        ========================== -->
+        <section class="faq-page__cta-section" aria-labelledby="faq-cta-title">
+
+            <div class="container">
+
+                <div class="faq-page__cta">
+
+                    <h2 id="faq-cta-title" class="faq-page__heading">
+                        پاسخ سوال خود را پیدا نکردید؟
+                    </h2>
+
+                    <p>
+                        تیم ما آماده پاسخگویی به سوالات شماست.
+                    </p>
+
+                    <div class="faq-page__cta-actions">
+                        <a class="button button--light button--large" href="contact/">
+                            تماس با ما
+                            <span aria-hidden="true">←</span>
+                        </a>
+                        <a class="faq-page__cta-outline" href="reservation/">
+                            رزرو سانس
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="site-footer__main">
+
+            <div class="site-footer__brand">
+
+                <a
+                    class="site-footer__logo"
+                    href="./"
+                    aria-label="صفحه اصلی استخر دانش کرج"
+                >
+                    <span class="site-footer__logo-mark" aria-hidden="true">
+                        د
+                    </span>
+
+                    <span class="site-footer__logo-text">
+                        <strong>استخر دانش</strong>
+                        <small>کرج</small>
+                    </span>
+                </a>
+
+                <p>
+                    استخر دانش کرج؛ مجموعه‌ای برای شنا، آموزش و
+                    تجربه‌ای آرام و ایمن برای خانواده‌ها و علاقه‌مندان
+                    به ورزش‌های آبی.
+                </p>
+
+                <a
+                    class="site-footer__brand-link"
+                    href="about/"
+                >
+                    آشنایی بیشتر با مجموعه
+                    <span aria-hidden="true">←</span>
+                </a>
+
+            </div>
+
+            <div class="site-footer__column">
+
+                <h2 class="site-footer__title">
+                    درباره مجموعه
+                </h2>
+
+                <nav aria-label="لینک‌های درباره مجموعه">
+                    <ul class="site-footer__links">
+
+                        <li>
+                            <a href="about/">
+                                درباره استخر دانش کرج
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="facilities/">
+                                امکانات استخر
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="coaches/">
+                                مربیان آموزش شنا
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="gallery/">
+                                گالری تصاویر مجموعه
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="site-footer__column">
+
+                <h2 class="site-footer__title">
+                    خدمات استخر
+                </h2>
+
+                <nav aria-label="لینک‌های خدمات استخر">
+                    <ul class="site-footer__links">
+
+                        <li>
+                            <a href="classes/">
+                                کلاس‌های آموزش شنا در کرج
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="schedule/">
+                                برنامه سانس‌های استخر
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pricing/">
+                                تعرفه خدمات و کلاس‌ها
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reservation/">
+                                روش‌های رزرو آنلاین
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="site-footer__column site-footer__contact">
+
+                <h2 class="site-footer__title">
+                    ارتباط با ما
+                </h2>
+
+                <address>
+
+                    <p>
+                        برای دریافت آدرس، ساعات کاری و اطلاعات تماس
+                        به صفحه تماس با ما مراجعه کنید.
+                    </p>
+
+                    <a href="contact/">
+                        آدرس و اطلاعات تماس استخر دانش کرج
+                        <span aria-hidden="true">←</span>
+                    </a>
+
+                </address>
+
+                <div class="site-footer__contact-actions">
+
+                    <a
+                        class="site-footer__contact-button"
+                        href="contact/"
+                    >
+                        تماس با مجموعه
+                    </a>
+
+                    <a
+                        class="site-footer__contact-button site-footer__contact-button--muted"
+                        href="faq/"
+                    >
+                        سوالات متداول
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="site-footer__middle">
+
+            <div class="site-footer__notice">
+
+                <span
+                    class="site-footer__notice-icon"
+                    aria-hidden="true"
+                >
+                    i
+                </span>
+
+                <p>
+                    ثبت نهایی رزرو در سامانه مقصد انجام می‌شود و
+                    پرداختی داخل این سایت انجام نمی‌شود.
+                </p>
+
+            </div>
+
+            <a
+                class="site-footer__booking-link"
+                href="reservation/"
+            >
+                ورود به صفحه روش‌های رزرو
+                <span aria-hidden="true">←</span>
+            </a>
+
+        </div>
+
+        <div class="site-footer__bottom">
+
+           © <span data-current-year></span> استخر دانش کرج. تمامی حقوق محفوظ است.
+
+            <nav aria-label="لینک‌های قانونی">
+                <ul class="site-footer__legal-links">
+
+                    <li>
+                        <a href="privacy/">
+                            حریم خصوصی
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms/">
+                            قوانین و مقررات
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact/">
+                            تماس با ما
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+</footer>
 </body>
 </html>

@@ -1,68 +1,1047 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <base href="/sadafpool/">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>گالری تصاویر استخر دانش کرج</title>
-    <meta name="description" content="تصاویر و ویدیوهای استخر دانش کرج.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; direction: rtl; }
-        body { font-family: 'Tahoma', Arial, sans-serif; background: #f4fbfd; color: #38566a; line-height: 1.6; }
-        .container { width: min(calc(100% - 48px), 1240px); margin: 0 auto; }
-        header { background: white; padding: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        .site-header__inner { display: flex; align-items: center; gap: 20px; justify-content: space-between; }
-        .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #092f46; font-weight: bold; }
-        .site-logo__mark { width: 40px; height: 40px; background: linear-gradient(145deg, #087ea4, #045d7b); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
-        nav { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
-        nav a { color: #092f46; text-decoration: none; padding: 8px 12px; border-radius: 6px; transition: all 0.3s; font-size: 14px; font-weight: bold; }
-        nav a:hover { background: #dff7fa; color: #087ea4; }
-        main { padding: 100px 0; }
-        section { padding: 50px 0; }
-        h1 { color: #092f46; font-size: 42px; margin-bottom: 20px; }
-        p { color: #38566a; margin-bottom: 15px; }
-        .button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 24px; text-decoration: none; font-weight: bold; border: none; cursor: pointer; transition: all 0.3s; }
-        .button--primary { background: #087ea4; color: white; }
-        .button--primary:hover { background: #045d7b; transform: translateY(-2px); }
-        .button--secondary { background: white; color: #087ea4; border: 2px solid #087ea4; }
-        .button--secondary:hover { background: #dff7fa; }
-    </style>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="language"
+        content="fa"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <meta
+        name="author"
+        content="استخر دانش کرج"
+    >
+
+    <meta
+        name="theme-color"
+        content="#087ea4"
+    >
+
+    <meta
+        name="format-detection"
+        content="telephone=yes"
+    >
+
+    <!-- عنوان صفحه -->
+    <title>گالری تصاویر | استخر دانش کرج</title>
+
+    <!-- توضیحات متا -->
+    <meta
+        name="description"
+        content="تصاویر استخرها، سونا، جکوزی، سالن بدنسازی و فضای مجموعه استخر دانش کرج."
+    >
+
+    <!-- Canonical -->
+    <link
+        rel="canonical"
+        href="https://wikifront.github.io/sadafpool/gallery/"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="assets/images/apple-touch-icon.png"
+    >
+
+    <!-- Open Graph -->
+    <meta
+        property="og:locale"
+        content="fa_IR"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:site_name"
+        content="استخر دانش کرج"
+    >
+
+    <meta
+        property="og:title"
+        content="گالری تصاویر استخر دانش"
+    >
+
+    <meta
+        property="og:description"
+        content="نگاهی به فضای مجموعه، استخرها و لحظه‌های آموزش شنا در استخر دانش کرج."
+    >
+
+    <meta
+        property="og:url"
+        content="https://wikifront.github.io/sadafpool/gallery/"
+    >
+
+    <meta
+        property="og:image"
+        content="https://wikifront.github.io/sadafpool/assets/images/og-gallery.webp"
+    >
+
+    <meta
+        property="og:image:alt"
+        content="گالری تصاویر استخر دانش"
+    >
+
+    <meta
+        property="og:image:type"
+        content="image/webp"
+    >
+
+    <meta
+        property="og:image:width"
+        content="1200"
+    >
+
+    <meta
+        property="og:image:height"
+        content="630"
+    >
+
+    <!-- Twitter Card -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+
+    <meta
+        name="twitter:title"
+        content="گالری تصاویر استخر دانش"
+    >
+
+    <meta
+        name="twitter:description"
+        content="نگاهی به فضای مجموعه، استخرها و لحظه‌های آموزش شنا در استخر دانش کرج."
+    >
+
+    <meta
+        name="twitter:image"
+        content="https://wikifront.github.io/sadafpool/assets/images/og-gallery.webp"
+    >
+
+    <meta
+        name="twitter:image:alt"
+        content="کلاس‌های آموزش شنا در استخر دانش کرج"
+    >
+
+    <!-- اتصال سریع به منابع خارجی GSAP -->
+    <link
+        rel="preconnect"
+        href="https://cdn.jsdelivr.net"
+    >
+
+    <!-- فونت فارسی موقت -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+  <!-- CSS اصلی -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- کتابخانه‌های خارجی -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+    <!-- اسکریپت‌های اختصاصی -->
+    <script src="assets/main.js" defer></script>
+    <script src="assets/interactions.js" defer></script>
+    <script src="assets/animations.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://wikifront.github.io/sadafpool/gallery/#webpage",
+                "url": "https://wikifront.github.io/sadafpool/gallery/",
+                "name": "گالری تصاویر استخر دانش",
+                "description": "تصاویر استخرها، سونا، جکوزی، سالن بدنسازی و فضای مجموعه استخر دانش کرج.",
+                "inLanguage": "fa-IR",
+                "isPartOf": {
+                    "@type": "WebSite",
+                    "@id": "https://wikifront.github.io/sadafpool/#website",
+                    "url": "https://wikifront.github.io/sadafpool/",
+                    "name": "استخر دانش کرج",
+                    "inLanguage": "fa-IR"
+                },
+                "about": {
+                    "@type": "SportsActivityLocation",
+                    "name": "استخر دانش کرج",
+                    "url": "https://wikifront.github.io/sadafpool/"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://wikifront.github.io/sadafpool/gallery/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "خانه",
+                        "item": "https://wikifront.github.io/sadafpool/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "آموزش شنا",
+                        "item": "https://wikifront.github.io/sadafpool/gallery/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
 </head>
 <body>
-    <a class="skip-link" href="#main-content" style="position: fixed; top: 10px; right: 10px; background: #092f46; color: white; padding: 10px; text-decoration: none; border-radius: 4px; z-index: 9999;">
+<a class="skip-link" href="#main-content">
         رفتن به محتوای اصلی
     </a>
-    <header class="site-header" id="site-header">
-        <div class="container site-header__inner">
-            <a class="site-logo" href="../" aria-label="صفحه اصلی">
-                <span class="site-logo__mark" aria-hidden="true">د</span>
-                <span><strong>استخر دانش</strong></span>
-            </a>
-            <nav>
-                <a href="../">خانه</a>
-                <a href="../about/">درباره ما</a>
-                <a href="../facilities/">امکانات</a>
-                <a href="../classes/">آموزش شنا</a>
-                <a href="../coaches/">مربیان</a>
-                <a href="../schedule/">سانس‌ها</a>
-                <a href="../pricing/">تعرفه‌ها</a>
-                <a href="../gallery/">گالری</a>
-                <a href="../blog/">وبلاگ</a>
-                <a href="../contact/">تماس</a>
-            </nav>
-        </div>
-    </header>
-    <main id="main-content">
-        <section>
-            <div class="container">
-                <h1>گالری تصاویر</h1>
-                <p>گالری تصاویر در حال توسعه است. به زودی تصاویر جدید اضافه خواهد شد.</p>
-                <p style="margin-top: 20px;">
-                    <a href="../" class="button button--primary">صفحه اصلی</a>
-                    <a href="../facilities/" class="button button--secondary" style="margin-right: 10px;">امکانات</a>
-                </p>
+<header
+    class="site-header"
+    id="site-header"
+>
+
+    <!-- نوار بالایی -->
+    <div class="site-topbar">
+
+        <div class="container site-topbar__inner">
+
+            <div class="site-topbar__welcome">
+                <span aria-hidden="true">✦</span>
+                <span>
+                    استخر دانش کرج؛ همراه شما برای شنا و آموزش
+                </span>
             </div>
+
+            <div class="site-topbar__links">
+
+                <a href="contact/">
+                    اطلاعات تماس
+                </a>
+
+                <span aria-hidden="true">|</span>
+
+                <a href="faq/">
+                    سوالات متداول
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- هدر اصلی -->
+    <div class="container site-header__inner">
+
+        <!-- Logo -->
+        <a
+            class="site-logo"
+            href="./"
+            aria-label="صفحه اصلی استخر دانش کرج"
+        >
+            <span
+                class="site-logo__mark"
+                aria-hidden="true"
+            >
+                د
+            </span>
+
+            <span class="site-logo__text">
+                <strong>استخر دانش</strong>
+                <small>کرج</small>
+            </span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="باز کردن منوی سایت"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Overlay -->
+        <div
+            class="navigation-overlay"
+            data-menu-close
+        ></div>
+
+        <!-- Navigation -->
+        <nav
+            class="main-navigation"
+            id="main-navigation"
+            aria-label="منوی اصلی"
+        >
+
+            <div class="main-navigation__header">
+
+                <div class="main-navigation__mobile-brand">
+
+                    <span
+                        class="site-logo__mark"
+                        aria-hidden="true"
+                    >
+                        د
+                    </span>
+
+                    <span>
+                        منوی سایت
+                    </span>
+
+                </div>
+
+                <button
+                    class="menu-close"
+                    type="button"
+                    aria-label="بستن منوی سایت"
+                    data-menu-close
+                >
+                    <span aria-hidden="true">×</span>
+                </button>
+
+            </div>
+
+            <ul class="main-navigation__list">
+
+                <li>
+                    <a href="./">
+                        خانه
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about/">
+                        درباره ما
+                    </a>
+                </li>
+
+                <li>
+                    <a href="facilities/">
+                        امکانات
+                    </a>
+                </li>
+
+                <li>
+                    <a href="classes/">
+                        آموزش شنا
+                    </a>
+                </li>
+
+                <li>
+                    <a href="coaches/">
+                        مربیان
+                    </a>
+                </li>
+
+                <li>
+                    <a href="schedule/">
+                        سانس‌ها
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pricing/">
+                        تعرفه‌ها
+                    </a>
+                </li>
+
+                <li>
+                    <a href="gallery/">
+                        گالری
+                    </a>
+                </li>
+
+                <li>
+                    <a href="blog/">
+                        وبلاگ
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact/">
+                        تماس با ما
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="main-navigation__mobile-cta">
+
+                <a
+                    class="button button--primary"
+                    href="reservation/"
+                >
+                    رزرو آنلاین
+                    <span aria-hidden="true">←</span>
+                </a>
+
+                <a
+                    class="main-navigation__mobile-contact"
+                    href="contact/"
+                >
+                    تماس با مجموعه
+                </a>
+
+            </div>
+
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="site-header__actions">
+
+            <a
+                class="site-header__contact"
+                href="contact/"
+                aria-label="تماس با استخر دانش کرج"
+            >
+                <span
+                    class="site-header__contact-icon"
+                    aria-hidden="true"
+                >
+                    ☎
+                </span>
+
+                <span>
+                    <small>ارتباط با ما</small>
+                    <strong>تماس با مجموعه</strong>
+                </span>
+            </a>
+
+            <a
+                class="button button--primary header-booking"
+                href="reservation/"
+            >
+                <span>رزرو آنلاین</span>
+                <span aria-hidden="true">←</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+    <main id="main-content">
+
+        <!-- =========================
+             Gallery Hero
+        ========================== -->
+        <section class="gallery-page__hero" aria-labelledby="gallery-page-title">
+
+            <div class="container">
+
+                <nav class="gallery-page__breadcrumbs" aria-label="موقعیت فعلی">
+                    <a href="./">خانه</a>
+                    <span aria-hidden="true">←</span>
+                    <span>گالری</span>
+                </nav>
+
+                <div class="gallery-page__hero-content">
+
+                    <span class="gallery-page__eyebrow">
+                        تصاویر مجموعه
+                    </span>
+
+                    <h1 id="gallery-page-title" class="gallery-page__heading">
+                        گالری استخر دانش کرج
+                    </h1>
+
+                    <p>
+                        نگاهی به فضای مجموعه، استخرها، سونا، جکوزی و لحظه‌های
+                        آموزش شنا در استخر دانش کرج.
+                    </p>
+
+                    <div class="gallery-page__hero-actions">
+                        <a class="gallery-page__hero-link" href="facilities/">
+                            مشاهده امکانات
+                            <span aria-hidden="true">←</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
         </section>
+
+        <!-- =========================
+             Gallery Content
+        ========================== -->
+        <section class="gallery-page__content-section" aria-labelledby="gallery-content-title">
+
+            <div class="container">
+
+                <div class="gallery-page__heading-row">
+
+                    <div>
+                        <span class="gallery-page__eyebrow">
+                            فضای مجموعه
+                        </span>
+                        <h2 id="gallery-content-title" class="gallery-page__heading">
+                            تصاویر فضای مجموعه
+                        </h2>
+                    </div>
+
+                    <a class="gallery-page__heading-link" href="reservation/">
+                        رزرو بازدید
+                        <span aria-hidden="true">←</span>
+                    </a>
+
+                </div>
+
+                <div class="gallery-page__filters" role="tablist" aria-label="فیلتر گالری">
+
+                    <button class="gallery-page__filter is-active" type="button" data-gallery-filter="all" aria-selected="true">
+                        همه
+                    </button>
+                    
+                    <button class="gallery-page__filter" type="button" data-gallery-filter="استخر" aria-selected="false">
+                        استخر
+                    </button>
+
+                    <button class="gallery-page__filter" type="button" data-gallery-filter="سونا و جکوزی" aria-selected="false">
+                        سونا و جکوزی
+                    </button>
+
+                    <button class="gallery-page__filter" type="button" data-gallery-filter="باشگاه" aria-selected="false">
+                        باشگاه
+                    </button>
+
+                    <button class="gallery-page__filter" type="button" data-gallery-filter="آموزش" aria-selected="false">
+                        آموزش
+                    </button>
+
+                    <button class="gallery-page__filter" type="button" data-gallery-filter="امکانات" aria-selected="false">
+                        امکانات
+                    </button>
+
+                    <button class="gallery-page__filter" type="button" data-gallery-filter="فضا" aria-selected="false">
+                        فضا
+                    </button>
+
+                </div>
+
+                <div class="gallery-page__grid">
+
+                    
+                        <button
+                            class="gallery-page__item gallery-page__item--large"
+                            type="button"
+                            data-gallery-category="استخر"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-pool-main.webp"
+                            data-gallery-alt="استخر اصلی"
+                            aria-label="مشاهده استخر اصلی"
+                        >
+                            <img
+                                src="assets/images/gallery-pool-main.webp"
+                                alt="استخر اصلی"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>استخر اصلی</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item"
+                            type="button"
+                            data-gallery-category="استخر"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-pool-children.webp"
+                            data-gallery-alt="استخر کودکان"
+                            aria-label="مشاهده استخر کودکان"
+                        >
+                            <img
+                                src="assets/images/gallery-pool-children.webp"
+                                alt="استخر کودکان"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>استخر کودکان</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item"
+                            type="button"
+                            data-gallery-category="سونا و جکوزی"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-sauna.webp"
+                            data-gallery-alt="سونا"
+                            aria-label="مشاهده سونا"
+                        >
+                            <img
+                                src="assets/images/gallery-sauna.webp"
+                                alt="سونا"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>سونا</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item gallery-page__item--wide"
+                            type="button"
+                            data-gallery-category="سونا و جکوزی"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-jacuzzi.webp"
+                            data-gallery-alt="جکوزی"
+                            aria-label="مشاهده جکوزی"
+                        >
+                            <img
+                                src="assets/images/gallery-jacuzzi.webp"
+                                alt="جکوزی"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>جکوزی</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item"
+                            type="button"
+                            data-gallery-category="باشگاه"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-gym.webp"
+                            data-gallery-alt="سالن بدنسازی"
+                            aria-label="مشاهده سالن بدنسازی"
+                        >
+                            <img
+                                src="assets/images/gallery-gym.webp"
+                                alt="سالن بدنسازی"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>سالن بدنسازی</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item gallery-page__item--large"
+                            type="button"
+                            data-gallery-category="آموزش"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-training.webp"
+                            data-gallery-alt="کلاس آموزش شنا"
+                            aria-label="مشاهده کلاس آموزش شنا"
+                        >
+                            <img
+                                src="assets/images/gallery-training.webp"
+                                alt="کلاس آموزش شنا"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>کلاس آموزش شنا</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item"
+                            type="button"
+                            data-gallery-category="امکانات"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-locker.webp"
+                            data-gallery-alt="رختکن"
+                            aria-label="مشاهده رختکن"
+                        >
+                            <img
+                                src="assets/images/gallery-locker.webp"
+                                alt="رختکن"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>رختکن</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item gallery-page__item--wide"
+                            type="button"
+                            data-gallery-category="فضا"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-night.webp"
+                            data-gallery-alt="نورپردازی شب"
+                            aria-label="مشاهده نورپردازی شب"
+                        >
+                            <img
+                                src="assets/images/gallery-night.webp"
+                                alt="نورپردازی شب"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>نورپردازی شب</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item"
+                            type="button"
+                            data-gallery-category="فضا"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-cafe.webp"
+                            data-gallery-alt="کافه مجموعه"
+                            aria-label="مشاهده کافه مجموعه"
+                        >
+                            <img
+                                src="assets/images/gallery-cafe.webp"
+                                alt="کافه مجموعه"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>کافه مجموعه</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+                        <button
+                            class="gallery-page__item"
+                            type="button"
+                            data-gallery-category="فضا"
+                            data-gallery-open
+                            data-gallery-image="/assets/images/gallery-stairs.webp"
+                            data-gallery-alt="ورودی مجموعه"
+                            aria-label="مشاهده ورودی مجموعه"
+                        >
+                            <img
+                                src="assets/images/gallery-stairs.webp"
+                                alt="ورودی مجموعه"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                            <span class="gallery-page__item-overlay">
+                                <span>ورودی مجموعه</span>
+                                <span aria-hidden="true">🔍</span>
+                            </span>
+                        </button>
+
+
+                </div>
+
+                <div class="gallery-page__info-box">
+                    <p>
+                        از دیدن مجموعه ما لذت بردید؟ برای رزرو سانس یا بازدید حضوری با ما در ارتباط باشید.
+                    </p>
+                    <a class="button button--primary" href="contact/">
+                        تماس با مجموعه
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+    <!-- =========================
+         Gallery Lightbox
+    ========================== -->
+    <div
+        class="gallery-lightbox"
+        id="gallery-lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="نمایش بزرگ تصویر"
+        hidden
+    >
+        <div class="gallery-lightbox__backdrop" data-gallery-close></div>
+        <div class="gallery-lightbox__content">
+            <div class="gallery-lightbox__header">
+                <h2 id="gallery-lightbox-title">گالری</h2>
+                <button class="gallery-lightbox__close" type="button" data-gallery-close aria-label="بستن">
+                    ×
+                </button>
+            </div>
+            <img class="gallery-lightbox__image" src="" alt="">
+        </div>
+    </div>
+
+<footer class="site-footer">
+
+    <div class="container">
+
+        <div class="site-footer__main">
+
+            <div class="site-footer__brand">
+
+                <a
+                    class="site-footer__logo"
+                    href="./"
+                    aria-label="صفحه اصلی استخر دانش کرج"
+                >
+                    <span class="site-footer__logo-mark" aria-hidden="true">
+                        د
+                    </span>
+
+                    <span class="site-footer__logo-text">
+                        <strong>استخر دانش</strong>
+                        <small>کرج</small>
+                    </span>
+                </a>
+
+                <p>
+                    استخر دانش کرج؛ مجموعه‌ای برای شنا، آموزش و
+                    تجربه‌ای آرام و ایمن برای خانواده‌ها و علاقه‌مندان
+                    به ورزش‌های آبی.
+                </p>
+
+                <a
+                    class="site-footer__brand-link"
+                    href="about/"
+                >
+                    آشنایی بیشتر با مجموعه
+                    <span aria-hidden="true">←</span>
+                </a>
+
+            </div>
+
+            <div class="site-footer__column">
+
+                <h2 class="site-footer__title">
+                    درباره مجموعه
+                </h2>
+
+                <nav aria-label="لینک‌های درباره مجموعه">
+                    <ul class="site-footer__links">
+
+                        <li>
+                            <a href="about/">
+                                درباره استخر دانش کرج
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="facilities/">
+                                امکانات استخر
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="coaches/">
+                                مربیان آموزش شنا
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="gallery/">
+                                گالری تصاویر مجموعه
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="site-footer__column">
+
+                <h2 class="site-footer__title">
+                    خدمات استخر
+                </h2>
+
+                <nav aria-label="لینک‌های خدمات استخر">
+                    <ul class="site-footer__links">
+
+                        <li>
+                            <a href="classes/">
+                                کلاس‌های آموزش شنا در کرج
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="schedule/">
+                                برنامه سانس‌های استخر
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pricing/">
+                                تعرفه خدمات و کلاس‌ها
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reservation/">
+                                روش‌های رزرو آنلاین
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="site-footer__column site-footer__contact">
+
+                <h2 class="site-footer__title">
+                    ارتباط با ما
+                </h2>
+
+                <address>
+
+                    <p>
+                        برای دریافت آدرس، ساعات کاری و اطلاعات تماس
+                        به صفحه تماس با ما مراجعه کنید.
+                    </p>
+
+                    <a href="contact/">
+                        آدرس و اطلاعات تماس استخر دانش کرج
+                        <span aria-hidden="true">←</span>
+                    </a>
+
+                </address>
+
+                <div class="site-footer__contact-actions">
+
+                    <a
+                        class="site-footer__contact-button"
+                        href="contact/"
+                    >
+                        تماس با مجموعه
+                    </a>
+
+                    <a
+                        class="site-footer__contact-button site-footer__contact-button--muted"
+                        href="faq/"
+                    >
+                        سوالات متداول
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="site-footer__middle">
+
+            <div class="site-footer__notice">
+
+                <span
+                    class="site-footer__notice-icon"
+                    aria-hidden="true"
+                >
+                    i
+                </span>
+
+                <p>
+                    ثبت نهایی رزرو در سامانه مقصد انجام می‌شود و
+                    پرداختی داخل این سایت انجام نمی‌شود.
+                </p>
+
+            </div>
+
+            <a
+                class="site-footer__booking-link"
+                href="reservation/"
+            >
+                ورود به صفحه روش‌های رزرو
+                <span aria-hidden="true">←</span>
+            </a>
+
+        </div>
+
+        <div class="site-footer__bottom">
+
+           © <span data-current-year></span> استخر دانش کرج. تمامی حقوق محفوظ است.
+
+            <nav aria-label="لینک‌های قانونی">
+                <ul class="site-footer__legal-links">
+
+                    <li>
+                        <a href="privacy/">
+                            حریم خصوصی
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="terms/">
+                            قوانین و مقررات
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact/">
+                            تماس با ما
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+    </div>
+
+</footer>
 </body>
 </html>

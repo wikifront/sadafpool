@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+    <base href="/sadafpool/">
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="assets/images/apple-touch-icon.png"
     >
 
     <title>
@@ -19,30 +32,102 @@
 
     <meta name="theme-color" content="#086f91">
 
+    <!-- Canonical -->
+    <link
+        rel="canonical"
+        href="https://wikifront.github.io/sadafpool/"
+    >
+
     <!-- Open Graph موقت -->
     <meta property="og:locale" content="fa_IR">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="استخر دانش کرج">
+    <meta property="og:site_name" content="استخر دانش کرج">
+    <meta property="og:title" content="استخر دانش کرج | شنا، آموزش و سانس‌های استخر">
     <meta
         property="og:description"
         content="معرفی امکانات، کلاس‌های آموزش شنا و سانس‌های استخر دانش کرج."
     >
     <meta
+        property="og:url"
+        content="https://wikifront.github.io/sadafpool/"
+    >
+    <meta
         property="og:image"
-        content="/assets/images/hero-pool.webp"
+        content="https://wikifront.github.io/sadafpool/assets/images/hero-pool.webp"
+    >
+    <meta
+        property="og:image:alt"
+        content="استخر دانش کرج"
+    >
+    <meta
+        property="og:image:type"
+        content="image/webp"
+    >
+    <meta
+        property="og:image:width"
+        content="1600"
+    >
+    <meta
+        property="og:image:height"
+        content="900"
     >
 
+    <!-- Twitter Card -->
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
+    <meta
+        name="twitter:title"
+        content="استخر دانش کرج | شنا، آموزش و سانس‌های استخر"
+    >
+    <meta
+        name="twitter:description"
+        content="معرفی امکانات، کلاس‌های آموزش شنا و سانس‌های استخر دانش کرج."
+    >
+    <meta
+        name="twitter:image"
+        content="https://wikifront.github.io/sadafpool/assets/images/hero-pool.webp"
+    >
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://wikifront.github.io/sadafpool/#website",
+                "url": "https://wikifront.github.io/sadafpool/",
+                "name": "استخر دانش کرج",
+                "inLanguage": "fa-IR"
+            },
+            {
+                "@type": "SportsActivityLocation",
+                "@id": "https://wikifront.github.io/sadafpool/#sports-location",
+                "name": "استخر دانش کرج",
+                "description": "مجموعه ورزشی مدرن برای شنا، آموزش و سلامت در کرج.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "کرج",
+                    "addressCountry": "IR"
+                }
+            }
+        ]
+    }
+    </script>
+
    <!-- CSS اصلی -->
-    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="assets/style.css">
 
     <!-- کتابخانه‌های خارجی -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 
     <!-- اسکریپت‌های اختصاصی -->
-    <script src="/assets/main.js" defer></script>
-    <script src="/assets/interactions.js" defer></script>
-    <script src="/assets/animations.js" defer></script>
+    <script src="assets/main.js" defer></script>
+    <script src="assets/interactions.js" defer></script>
+    <script src="assets/animations.js" defer></script>
 </head>
 
 <body>
@@ -75,13 +160,13 @@
 
             <div class="site-topbar__links">
 
-                <a href="/contact/">
+                <a href="contact/">
                     اطلاعات تماس
                 </a>
 
                 <span aria-hidden="true">|</span>
 
-                <a href="/faq/">
+                <a href="faq/">
                     سوالات متداول
                 </a>
 
@@ -97,7 +182,7 @@
         <!-- Logo -->
         <a
             class="site-logo"
-            href="/"
+            href="./"
             aria-label="صفحه اصلی استخر دانش کرج"
         >
             <span
@@ -170,61 +255,61 @@
             <ul class="main-navigation__list">
 
                 <li>
-                    <a href="/">
+                    <a href="./">
                         خانه
                     </a>
                 </li>
 
                 <li>
-                    <a href="/about/">
+                    <a href="about/">
                         درباره ما
                     </a>
                 </li>
 
                 <li>
-                    <a href="/facilities/">
+                    <a href="facilities/">
                         امکانات
                     </a>
                 </li>
 
                 <li>
-                    <a href="/classes/">
+                    <a href="classes/">
                         آموزش شنا
                     </a>
                 </li>
 
                 <li>
-                    <a href="/coaches/">
+                    <a href="coaches/">
                         مربیان
                     </a>
                 </li>
 
                 <li>
-                    <a href="/schedule/">
+                    <a href="schedule/">
                         سانس‌ها
                     </a>
                 </li>
 
                 <li>
-                    <a href="/pricing/">
+                    <a href="pricing/">
                         تعرفه‌ها
                     </a>
                 </li>
 
                 <li>
-                    <a href="/gallery/">
+                    <a href="gallery/">
                         گالری
                     </a>
                 </li>
 
                 <li>
-                    <a href="/blog/">
+                    <a href="blog/">
                         وبلاگ
                     </a>
                 </li>
 
                 <li>
-                    <a href="/contact/">
+                    <a href="contact/">
                         تماس با ما
                     </a>
                 </li>
@@ -235,7 +320,7 @@
 
                 <a
                     class="button button--primary"
-                    href="/reservation/"
+                    href="reservation/"
                 >
                     رزرو آنلاین
                     <span aria-hidden="true">←</span>
@@ -243,7 +328,7 @@
 
                 <a
                     class="main-navigation__mobile-contact"
-                    href="/contact/"
+                    href="contact/"
                 >
                     تماس با مجموعه
                 </a>
@@ -257,7 +342,7 @@
 
             <a
                 class="site-header__contact"
-                href="/contact/"
+                href="contact/"
                 aria-label="تماس با استخر دانش کرج"
             >
                 <span
@@ -275,7 +360,7 @@
 
             <a
                 class="button button--primary header-booking"
-                href="/reservation/"
+                href="reservation/"
             >
                 <span>رزرو آنلاین</span>
                 <span aria-hidden="true">←</span>
@@ -328,7 +413,7 @@
 
                         <a
                             class="button button--primary button--large"
-                            href="/reservation/"
+                            href="reservation/"
                         >
                             <span>مشاهده روش‌های رزرو</span>
                             <span class="button__arrow" aria-hidden="true">
@@ -338,7 +423,7 @@
 
                         <a
                             class="button button--secondary button--large"
-                            href="/schedule/"
+                            href="schedule/"
                         >
                             مشاهده سانس‌ها
                         </a>
@@ -379,7 +464,7 @@
 
                         <img
                             class="hero-section__image"
-                            src="/assets/images/hero-pool.webp"
+                            src="assets/images/hero-pool.webp"
                             width="900"
                             height="760"
                             alt="نمای داخلی استخر دانش کرج"
