@@ -170,10 +170,11 @@
 
    <!-- CSS اصلی -->
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/overrides.css">
 
     <!-- کتابخانه‌های خارجی -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 
     <!-- اسکریپت‌های اختصاصی -->
     <script src="assets/main.js" defer></script>
@@ -319,7 +320,13 @@
         }
     ]
 }
+    </script>    <script>
+        // علامت‌گذاری بارگذاری GSAP — برای جلوگیری از پنهان ماندن المان‌ها
+        document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.add("gsap-loaded");
+        });
     </script>
+
 </head>
 
 <body>

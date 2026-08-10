@@ -93,11 +93,15 @@
     <!-- Structured Data -->
 
    <!-- CSS اصلی -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/overrides.css">
 
     <!-- کتابخانه‌های خارجی -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 
     <!-- اسکریپت‌های اختصاصی -->
     <script src="assets/main.js" defer></script>
@@ -227,7 +231,13 @@
         }
     ]
 }
+    </script>    <script>
+        // علامت‌گذاری بارگذاری GSAP — برای جلوگیری از پنهان ماندن المان‌ها
+        document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.add("gsap-loaded");
+        });
     </script>
+
 </head>
 
 <body>
@@ -982,7 +992,7 @@
 
         </section>
 
-        <!-- =========================
+                <!-- =========================
              Schedule Preview
         ========================== -->
         <section class="section schedule-preview" aria-labelledby="schedule-preview-title">
@@ -998,28 +1008,50 @@
                 <div class="schedule-preview__list">
 
                     <div class="schedule-slot">
-                        <div class="schedule-slot__top">
-                            <span class="schedule-slot__day">هر روز هفته</span>
-                            <span class="schedule-slot__time">۰۷:۰۰ تا ۲۲:۰۰</span>
+
+                        <span class="schedule-slot__icon" aria-hidden="true">🕖</span>
+
+                        <div class="schedule-slot__content">
+                            <div class="schedule-slot__title-row">
+                                <h3>هر روز هفته</h3>
+                                <span class="schedule-slot__badge">۰۷:۰۰ تا ۲۲:۰۰</span>
+                            </div>
+                            <p>سانس‌های عمومی و اختصاصی بر اساس برنامه هفتگی؛ سانس بانوان از ساعت ۸ صبح تا ۱ بعدازظهر و ۵ تا ۸ شب.</p>
                         </div>
-                        <p>سانس‌های عمومی و اختصاصی بر اساس برنامه هفتگی؛ سانس بانوان از ساعت ۸ صبح تا ۱ بعدازظهر و ۵ تا ۸ شب.</p>
+
+                        <a class="schedule-slot__link" href="schedule/" aria-label="مشاهده برنامه کامل سانس‌ها">
+                            <span aria-hidden="true">←</span>
+                        </a>
+
                     </div>
 
                     <div class="schedule-slot schedule-slot--highlight">
-                        <div class="schedule-slot__top">
-                            <span class="schedule-slot__day">جمعه‌ها</span>
-                            <span class="schedule-slot__time">۰۹:۰۰ تا ۲۰:۰۰</span>
+
+                        <span class="schedule-slot__icon" aria-hidden="true">⭐</span>
+
+                        <div class="schedule-slot__content">
+                            <div class="schedule-slot__title-row">
+                                <h3>روزهای جمعه</h3>
+                                <span class="schedule-slot__badge">۰۹:۰۰ تا ۲۰:۰۰</span>
+                            </div>
+                            <p>سانس‌های آخر هفته با ظرفیت محدود — رزرو قبلی توصیه می‌شود.</p>
                         </div>
-                        <p>سانس‌های آخر هفته با ظرفیت محدود — رزرو قبلی توصیه می‌شود.</p>
+
+                        <a class="schedule-slot__link" href="reservation/" aria-label="رزرو سانس آخر هفته">
+                            <span aria-hidden="true">←</span>
+                        </a>
+
                     </div>
 
                 </div>
 
                 <div class="schedule-preview__bottom">
+
                     <div class="schedule-preview__note">
-                        <span aria-hidden="true">⏱</span>
+                        <span class="schedule-preview__note-icon" aria-hidden="true">⏱</span>
                         <p>برنامه دقیق سانس‌ها و تغییرات مناسبت‌ها را در صفحه برنامه سانس‌ها ببینید.</p>
                     </div>
+
                     <div class="schedule-preview__actions">
                         <a class="button button--secondary" href="schedule/">
                             برنامه کامل
@@ -1030,6 +1062,7 @@
                             <span aria-hidden="true">←</span>
                         </a>
                     </div>
+
                 </div>
 
             </div>

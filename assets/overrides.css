@@ -1,0 +1,166 @@
+/* =========================================================
+   استخر صدف — بهبود خوانایی، هاور و چیدمان
+   این فایل در همه صفحات بعد از style.css لود می‌شود
+   ========================================================= */
+
+/* ---------- 1. لینک‌های دسترسی سریع (intro preview) ---------- */
+.intro-preview__links a {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.intro-preview__links a strong {
+    color: var(--color-dark);
+    font-size: 16px;
+    font-weight: 800;
+    transition: color var(--transition);
+}
+
+.intro-preview__links a span {
+    color: var(--color-muted);
+    font-size: 13px;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.intro-preview__links a:hover strong {
+    color: var(--color-primary);
+}
+
+.intro-preview__links a:hover span {
+    color: var(--color-primary-dark);
+}
+
+/* ---------- 2. لینک‌های کارت‌ها — بزرگ‌تر و واضح‌تر ---------- */
+.class-card__link,
+.facility-card__link,
+.coach-card__link,
+.about-preview__text-link {
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+}
+
+.class-card__link:hover,
+.facility-card__link:hover,
+.coach-card__link:hover {
+    gap: 12px;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* ---------- 3. هاور واضح برای لینک‌های هدر بخش‌ها ---------- */
+.classes-preview__header-link:hover,
+.coaches-preview__header-link:hover,
+.gallery-preview__header-link:hover {
+    border-color: var(--color-primary);
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-soft);
+}
+
+/* ---------- 4. سکشن سانس‌ها — فاصله و چیدمان بهتر ---------- */
+.schedule-preview__list {
+    gap: 20px;
+}
+
+.schedule-slot {
+    align-items: center;
+}
+
+.schedule-slot p {
+    max-width: 520px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.schedule-slot__badge {
+    font-size: 11px;
+}
+
+.schedule-preview__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 30px;
+    padding-top: 28px;
+    border-top: 1px dashed var(--color-border);
+}
+
+.schedule-preview__note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 480px;
+}
+
+.schedule-preview__note-icon {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: rgba(243, 189, 74, 0.16);
+    color: #b07d0e;
+    font-size: 18px;
+}
+
+.schedule-preview__note p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.schedule-preview__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ---------- 5. لود سریع: اگر GSAP در دسترس نباشد، المان‌ها نمایان بمانند ----------
+   (کلاس gsap-loaded توسط اسکریپت بلافاصله بعد از لود DOM اضافه می‌شود؛
+    انیمیشن‌ها فقط با gsap اعمال می‌شوند و این قانون‌ها تداخلی با آن ندارند) */
+html:not(.gsap-loaded) .hero-section__content,
+html:not(.gsap-loaded) .section-heading,
+html:not(.gsap-loaded) .about-preview__content,
+html:not(.gsap-loaded) .class-card,
+html:not(.gsap-loaded) .facility-card,
+html:not(.gsap-loaded) .coach-card,
+html:not(.gsap-loaded) .gallery-preview__item,
+html:not(.gsap-loaded) .faq-item,
+html:not(.gsap-loaded) .schedule-slot {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- 6. فوتر — لینک‌های خوانا ---------- */
+.site-footer__links a:hover {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* ---------- 7. موبایل — فاصله سکشن سانس‌ها ---------- */
+@media (max-width: 720px) {
+    .schedule-slot {
+        padding: 18px;
+    }
+
+    .schedule-preview__bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .schedule-preview__actions {
+        justify-content: stretch;
+    }
+
+    .schedule-preview__actions .button {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}

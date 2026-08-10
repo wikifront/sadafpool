@@ -17,9 +17,13 @@
     <meta property="og:description" content="آشنایی با رایج‌ترین اشتباهات شناگران مبتدی و راه‌های اصلاح آن‌ها برای پیشرفت سریع‌تر در آب.">
     <meta property="og:url" content="https://wikifront.github.io/sadafpool/blog/beginner-swimming-mistakes/">
     <meta property="og:image" content="https://wikifront.github.io/sadafpool/assets/images/gallery-pool-main.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="assets/overrides.css">
+    <script src="assets/vendor/gsap.min.js" defer></script>
+    <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
     <script src="assets/main.js" defer></script>
     <script src="assets/interactions.js" defer></script>
     <script src="assets/animations.js" defer></script>
@@ -89,7 +93,13 @@
         }
     ]
 }
+    </script>    <script>
+        // علامت‌گذاری بارگذاری GSAP — برای جلوگیری از پنهان ماندن المان‌ها
+        document.addEventListener("DOMContentLoaded", function () {
+            document.documentElement.classList.add("gsap-loaded");
+        });
     </script>
+
 </head>
 <body>
     <a class="skip-link" href="#main-content">رفتن به محتوای اصلی</a>
