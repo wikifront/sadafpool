@@ -1,6 +1,8 @@
 (function () {
     "use strict";
 
+    var WA_NUM = "989123665400";
+
     function ready(callback) {
         if (document.readyState === "loading") {
             document.addEventListener(
@@ -643,8 +645,57 @@
 
                     status.style.color = "#c53030";
                 } else {
+                    const nameField = qs(
+                        "#contact-name",
+                        form
+                    );
+
+                    const subjectField = qs(
+                        "#contact-subject",
+                        form
+                    );
+
+                    const messageField = qs(
+                        "#contact-message",
+                        form
+                    );
+
+                    const subjectText =
+                        subjectField &&
+                        subjectField.options &&
+                        subjectField.selectedIndex >= 0
+                            ? subjectField.options[
+                                  subjectField.selectedIndex
+                              ].text
+                            : "";
+
+                    const text =
+                        "سلام، پیام جدید از فرم تماس وب‌سایت استخر صدف:\n\n" +
+                        "نام: " +
+                        (nameField
+                            ? nameField.value.trim()
+                            : "") +
+                        "\n" +
+                        "شماره تماس: " +
+                        phone.value.trim() +
+                        "\n" +
+                        "موضوع: " +
+                        subjectText +
+                        "\n" +
+                        "متن پیام: " +
+                        (messageField
+                            ? messageField.value.trim()
+                            : "");
+
+                    window.open(
+                        "https://wa.me/" + WA_NUM + "?text=" +
+                            encodeURIComponent(text),
+                        "_blank",
+                        "noopener"
+                    );
+
                     status.textContent =
-                        "اطلاعات فرم کامل است. اتصال ارسال پیام در مرحله بعد انجام می‌شود.";
+                        "در حال انتقال به واتساپ… لطفاً پیام را ارسال کنید.";
 
                     status.style.color = "#218739";
                 }
