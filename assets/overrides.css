@@ -241,6 +241,20 @@ html.gsap-loaded .pricing-card--featured {
     color: #b07d0e;
 }
 
+/* ---------- 5j. Mobile nav: hide desktop nav, show only toggle ---------- */
+/* The single <nav class="main-navigation"> serves both desktop & mobile.
+   Desktop: flex child in header (flex: 1 1 auto).
+   Mobile: fixed sidebar toggled by JS.
+   On mobile viewport, hide the in-flow desktop nav completely. */
+@media (max-width: 900px) {
+    .main-navigation {
+        display: none !important; /* hide in-flow desktop nav */
+    }
+    .main-navigation.is-open {
+        display: flex !important; /* show when JS opens mobile menu */
+    }
+}
+
 /* ---------- 6. فوتر — لینک‌های خوانا ---------- */
 .site-footer__links a:hover {
     color: var(--color-white);
