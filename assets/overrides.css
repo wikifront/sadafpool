@@ -138,6 +138,74 @@ html:not(.gsap-loaded) .schedule-slot {
     transform: none;
 }
 
+/* ---------- 5b. کارت‌های ویژه (featured) — متن سفید روی پس‌زمینه آبی ----------
+   بگ خاصیتی: `.card--featured h3` و `.card h3` هر دو specificity برابر (0,1,1)
+   دارند، پس rule بعدی (تیره) برنده می‌شود و متن تیره روی آبی نامرئی می‌شود.
+   با دو کلاس یا !important این را اصلاح می‌کنیم. */
+.classes-page__course-card.classes-page__course-card--featured h3,
+.classes-page__course-card.classes-page__course-card--featured > p,
+.classes-page__course-card.classes-page__course-card--featured .classes-page__course-features li,
+.facility-detail-card--featured h3,
+.facility-detail-card--featured p,
+.facility-detail-card--featured .facility-detail-card__link,
+.schedule-page__card--featured h3,
+.schedule-page__card--featured p,
+.schedule-page__card--featured .schedule-page__card-link,
+.pricing-card--featured h3,
+.pricing-card--featured p,
+.pricing-card--featured .pricing-card__link {
+    color: #ffffff !important;
+}
+
+/* ---------- 5c. آیکون‌های اموجی داخل چیپ‌ها — بزرگ‌تر و خوانا ---------- */
+.class-card__icon,
+.facility-card__icon,
+.schedule-slot__icon,
+.classes-page__course-icon,
+.schedule-page__card-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+.about-preview__feature-icon {
+    font-size: 15px;
+    line-height: 1;
+}
+
+/* ---------- 5d. سوالات متداول بسته — حذف فاصله خالی زیر پاسخ ---------- */
+.faq-item__answer[hidden] .faq-item__answer-inner,
+.faq-page__answer[hidden] .faq-page__answer-inner {
+    padding-bottom: 0;
+}
+
+/* ---------- 5e. متن muted تیره‌تر — دسترس‌پذیری (4.96:1 روی سفید) ---------- */
+:root {
+    --color-muted: #5b7384;
+}
+
+/* ---------- 5f. کارت‌های انیمیشنی GSAP — اگر انیمیشن اجرا نشد، نمایان بمانند ----------
+   GSAP با from() مقدار opacity:0 را inline می‌گذارد و منتظر ScrollTrigger
+   می‌ماند. اگر ScrollTrigger لود نشود یا خطا بدهد، کارت‌ها تا ابد نامرئی
+   می‌مانند. این قانون با transition محافظت می‌کند. */
+.faq-item:not([style*="opacity"]),
+.gallery-preview__item:not([style*="opacity"]),
+.class-card:not([style*="opacity"]),
+.facility-card:not([style*="opacity"]),
+.coach-card:not([style*="opacity"]),
+.classes-page__course-card:not([style*="opacity"]),
+.schedule-page__card:not([style*="opacity"]) {
+    opacity: 1;
+    transform: none;
+}
+
+/* ---------- 5g. کارت‌های featured — opacity محافظ (GSAP هم روی آن‌ها از 0 شروع می‌کند) ---------- */
+html.gsap-loaded .classes-page__course-card--featured,
+html.gsap-loaded .facility-detail-card--featured,
+html.gsap-loaded .schedule-page__card--featured,
+html.gsap-loaded .pricing-card--featured {
+    opacity: 1 !important;
+}
+
 /* ---------- 6. فوتر — لینک‌های خوانا ---------- */
 .site-footer__links a:hover {
     color: var(--color-white);
@@ -194,3 +262,6 @@ html:not(.gsap-loaded) .schedule-slot {
     outline: 3px solid rgba(243, 189, 74, 0.8);
     outline-offset: 2px;
 }
+
+
+/* (all fixes moved to sections 5b–5g above — no duplicates kept here) */
