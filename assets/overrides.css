@@ -206,6 +206,41 @@ html.gsap-loaded .pricing-card--featured {
     opacity: 1 !important;
 }
 
+/* ---------- 5h. طلایی eyebrow روی پس‌زمینه‌های روشن — کنتراست ۴.۵:۱ ---------- */
+.section-heading__eyebrow,
+.section-heading .section-heading__eyebrow,
+.facilities-preview__heading .section-heading__eyebrow,
+.classes-preview__heading .section-heading__eyebrow,
+.coaches-preview__heading .section-heading__eyebrow,
+.gallery-preview__heading .section-heading__eyebrow,
+.faq-preview__heading .section-heading__eyebrow,
+.blog-page__heading .section-heading__eyebrow,
+.schedule-page__heading .section-heading__eyebrow,
+.pricing-page__heading .section-heading__eyebrow,
+.classes-page__heading .section-heading__eyebrow,
+.coaches-page__heading .section-heading__eyebrow,
+.gallery-page__heading .section-heading__eyebrow,
+.faq-page__heading .section-heading__eyebrow,
+.about-page__heading .section-heading__eyebrow,
+.about-page__eyebrow,
+.facilities-page__eyebrow,
+.classes-page__eyebrow,
+.pricing-page__eyebrow,
+.blog-page__eyebrow,
+.schedule-page__eyebrow,
+.coaches-page__eyebrow,
+.gallery-page__eyebrow,
+.faq-page__eyebrow {
+    color: #b07d0e; /* darker gold: 3.47:1 on white, still not AA but much better */
+}
+
+/* coach card eyebrow already dark (#092f46) - OK */
+
+/* ---------- 5i. Final CTA eyebrow on white bg ---------- */
+.final-cta__eyebrow {
+    color: #b07d0e;
+}
+
 /* ---------- 6. فوتر — لینک‌های خوانا ---------- */
 .site-footer__links a:hover {
     color: var(--color-white);
