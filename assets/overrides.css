@@ -549,14 +549,16 @@ html.gsap-loaded .pricing-card--featured {
     filter: drop-shadow(0 0 6px var(--mob-nav-accent-glow));
 }
 
-/* Navigation List */
-.main-navigation__list {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+/* Navigation List — MOBILE ONLY */
+@media (max-width: 900px) {
+    .main-navigation__list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
 }
 
 .main-navigation__link {
@@ -827,6 +829,78 @@ body.menu-is-open {
         color: #031c2a;
     }
 }
+
+/* =========================================================
+   DESKTOP NAV FIX — Ensure horizontal nav on desktop
+   ========================================================= */
+
+@media (min-width: 901px) {
+    .main-navigation {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        position: static !important;
+        width: auto !important;
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        transform: none !important;
+        visibility: visible !important;
+        overflow: visible !important;
+    }
+
+    .main-navigation__list {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 2px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .main-navigation__list li {
+        border-bottom: none !important;
+    }
+
+    .main-navigation__list a {
+        display: block !important;
+        padding: 10px 9px !important;
+        font-size: 12px !important;
+        white-space: nowrap !important;
+    }
+
+    .main-navigation__list a::after {
+        position: absolute !important;
+        right: 9px !important;
+        bottom: 2px !important;
+        left: 9px !important;
+        height: 2px !important;
+        border-radius: 20px !important;
+        background: var(--color-primary) !important;
+        content: "" !important;
+        transform: scaleX(0) !important;
+        transform-origin: center !important;
+        transition: transform var(--transition) !important;
+        width: auto !important;
+    }
+
+    .main-navigation__list a:hover::after,
+    .main-navigation__list li.is-active > a::after {
+        transform: scaleX(1) !important;
+    }
+
+    .main-navigation__header,
+    .main-navigation__content,
+    .main-navigation__section,
+    .main-navigation__section-title,
+    .main-navigation__mobile-cta,
+    .main-navigation__cta,
+    .main-navigation__mobile-contact,
+    .menu-close {
+        display: none !important;
+    }
+}
+
 
 /* =========================================================
    END MOBILE NAV REDESIGN
