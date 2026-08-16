@@ -426,123 +426,220 @@
 
         <!-- Navigation -->
         <nav
-            class="main-navigation"
-            id="main-navigation"
-            aria-label="منوی اصلی"
-        >
-
-            <div class="main-navigation__header">
-
-                <div class="main-navigation__mobile-brand">
-
-                    <span
-                        class="site-logo__mark"
-                        aria-hidden="true"
-                    >
-                        د
-                    </span>
-
-                    <span>
-                        منوی سایت
-                    </span>
-
-                </div>
-
-                <button
-                    class="menu-close"
-                    type="button"
-                    aria-label="بستن منوی سایت"
-                    data-menu-close
+                    class="main-navigation"
+                    id="main-navigation"
+                    aria-label="منوی اصلی"
+                    role="navigation"
                 >
-                    <span aria-hidden="true">×</span>
-                </button>
 
-            </div>
+                    <!-- Mobile Header -->
+                    <div class="main-navigation__header">
 
-            <ul class="main-navigation__list">
+                        <div class="main-navigation__mobile-brand">
 
-                <li>
-                    <a href="./">
-                        خانه
-                    </a>
-                </li>
+                            <span
+                                class="site-logo__mark"
+                                aria-hidden="true"
+                            >
+                                د
+                            </span>
 
-                <li>
-                    <a href="about/">
-                        درباره ما
-                    </a>
-                </li>
+                            <span>
+                                منوی سایت
+                            </span>
 
-                <li>
-                    <a href="facilities/">
-                        امکانات
-                    </a>
-                </li>
+                        </div>
 
-                <li>
-                    <a href="classes/">
-                        آموزش شنا
-                    </a>
-                </li>
+                        <button
+                            class="menu-close"
+                            type="button"
+                            aria-label="بستن منوی سایت"
+                            data-menu-close
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
 
-                <li>
-                    <a href="coaches/">
-                        مربیان
-                    </a>
-                </li>
+                    </div>
 
-                <li>
-                    <a href="schedule/">
-                        سانس‌ها
-                    </a>
-                </li>
+                    <!-- Navigation Sections -->
+                    <div class="main-navigation__content">
 
-                <li>
-                    <a href="pricing/">
-                        تعرفه‌ها
-                    </a>
-                </li>
+                        <!-- Section 1: Services -->
+                        <section class="main-navigation__section" aria-label="خدمات استخر">
+                            <h3 class="main-navigation__section-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M12 2v20M17 5H7"></path>
+                                </svg>
+                                خدمات استخر
+                            </h3>
+                            <ul class="main-navigation__list" role="list">
+                                <li>
+                                    <a href="./" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                        </svg>
+                                        <span>خانه</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="about/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                                        </svg>
+                                        <span>درباره ما</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="facilities/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <path d="M9 9h6v6H9z"></path>
+                                        </svg>
+                                        <span>امکانات</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
 
-                <li>
-                    <a href="gallery/">
-                        گالری
-                    </a>
-                </li>
+                        <!-- Section 2: Training -->
+                        <section class="main-navigation__section" aria-label="آموزش شنا">
+                            <h3 class="main-navigation__section-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M17 18a5 5 0 0 0-10 0"></path>
+                                    <path d="M12 2v20"></path>
+                                    <path d="M2 12h20"></path>
+                                </svg>
+                                آموزش شنا
+                            </h3>
+                            <ul class="main-navigation__list" role="list">
+                                <li>
+                                    <a href="classes/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path>
+                                            <path d="M21 3v5h-5"></path>
+                                            <path d="M21 12a9 9 0 1 1-9 9c2.52 0 4.93-1 6.74-2.74L21 16"></path>
+                                            <path d="M15 3h5v5"></path>
+                                        </svg>
+                                        <span>دوره‌های آموزش</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="coaches/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        <span>مربیان</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
 
-                <li>
-                    <a href="blog/">
-                        وبلاگ
-                    </a>
-                </li>
+                        <!-- Section 3: Schedule & Contact -->
+                        <section class="main-navigation__section" aria-label="برنامه و تماس">
+                            <h3 class="main-navigation__section-title">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                برنامه و تماس
+                            </h3>
+                            <ul class="main-navigation__list" role="list">
+                                <li>
+                                    <a href="schedule/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                        <span>برنامه سانس‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pricing/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M12 2v20M17 5H7"></path>
+                                        </svg>
+                                        <span>تعرفه‌ها</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="gallery/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                            <polyline points="21 15 16 10 5 21"></polyline>
+                                        </svg>
+                                        <span>گالری</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="blog/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg>
+                                        <span>وبلاگ</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contact/" class="main-navigation__link">
+                                        <svg class="main-navigation__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                            <circle cx="12" cy="10" r="3"></circle>
+                                        </svg>
+                                        <span>تماس با ما</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
 
-                <li>
-                    <a href="contact/">
-                        تماس با ما
-                    </a>
-                </li>
+                    </div>
 
-            </ul>
+                    <!-- Mobile CTA Buttons -->
+                    <div class="main-navigation__mobile-cta">
 
-            <div class="main-navigation__mobile-cta">
+                        <a
+                            class="button button--primary main-navigation__cta"
+                            href="reservation/"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span>رزرو آنلاین</span>
+                            <svg class="main-navigation__cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
 
-                <a
-                    class="button button--primary"
-                    href="reservation/"
-                >
-                    رزرو آنلاین
-                    <span aria-hidden="true">←</span>
-                </a>
+                        <a
+                            class="main-navigation__mobile-contact"
+                            href="contact/"
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            <span>تماس با مجموعه</span>
+                        </a>
 
-                <a
-                    class="main-navigation__mobile-contact"
-                    href="contact/"
-                >
-                    تماس با مجموعه
-                </a>
+                    </div>
 
-            </div>
-
-        </nav>
+                </nav>
 
         <!-- Header Actions -->
         <div class="site-header__actions">
